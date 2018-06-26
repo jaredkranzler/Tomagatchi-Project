@@ -6,44 +6,51 @@ class Tom {
   constructor(name, age, hungerLevel, sleepiness, boredom, time){
     this.name = name;
     this.time = 0;
-    this.age = age;
+    this.age = 0;
     this.hungerLevel = hungerLevel;
     this.sleepiness = sleepiness;
     this.boredom = boredom;
   }
+
   eat(food){
+    //makes button click hunger method - 1.
     this.hungerLevel--
-    $('#hunger').text("Hunger:( " + this.hungerLevel + " )");
-
+    // $('#hunger').text("Hunger:( " + this.hungerLevel + " )");
   }
 
-  sleepMore(){
+  rest(){
     this.sleepiness--
-    $('#sleep').text("Rest:( " + this.sleepiness + " )");
-      // window.alert("Your Dead Tired, But really, Your Dead!")
-    
+    // $('#bed').text("Sleepiness:( " + this.sleepiness + " )");
+
   }
+
   playMore(){
    this.boredom--
-   $('#play').text("Boredom:( " + this.boredom-- + " )")
+   // $('#play').text("Boredom:( " + this.boredom + " )")
+
   }
 
-  updateScore() {
+  updateAge() {
+    //this make the age increase by 1 every 10 seconds
+    if (this.time % 10 === 0){
+      this.age++
+    }
+    //this prints the updated age to the page
+    $('#age').text("Age: " + this.age)
     // 
   }
 };
-
 const xxx = new Tom('Jim', 0, 0, 0, 0)
 
 // Clicking -----
-
+// console.log(xxx.sleepiness());
 $('.F').on('click', (e) => {
   xxx.eat()
 }); 
 
 
 $('.L').on('click', (e) => {
-  xxx.sleepMore();
+  xxx.rest()
 });
 
 
@@ -56,17 +63,26 @@ $('.P').on('click', (e) => {
  // timer code goes here
 const intervalId = setInterval(() =>{
   xxx.time++;
+  //this increases hunger level by 1 every 5 seconds
   if(xxx.time % 5 === 0){
     xxx.hungerLevel = xxx.hungerLevel + 1;
   }
+  if (xxx.time % 7 === 0){
+    xxx.boredom = xxx.boredom + 2;
+  }
+  if (xxx.time % 9 === 0){
+    xxx.sleepiness = xxx.sleepiness + 3;
+  }
+
   $('#timer').text('Time: ' + xxx.time + 's');
-
+  //this prints the hunger level 
   $('#hunger').text("Hunger:( " + xxx.hungerLevel + " )")
+
+  $('#bed').text("Sleepiness:( " + xxx.sleepiness + " )")
+  //this prints the boredom level 
+  $('#play').text("Boredom:( " + xxx.boredom + " )")
+  //this called the update age method 
+  xxx.updateAge()
 }, 1000)
-
-
-
-
-
 
 
