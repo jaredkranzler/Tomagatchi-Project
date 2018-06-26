@@ -1,7 +1,7 @@
 console.log('Tomagotchichichichi');
 
 // class---
-let time = 30
+
 class Tom {
   constructor(name, age, hungerLevel, sleepiness, boredom, time){
     this.name = name;
@@ -27,13 +27,17 @@ class Tom {
    this.boredom--
    $('#play').text("Boredom:( " + this.boredom-- + " )")
   }
+
+  updateScore() {
+    // 
+  }
 };
+
 const xxx = new Tom('Jim', 0, 0, 0, 0)
 
 // Clicking -----
 
 $('.F').on('click', (e) => {
-  console.log('clicked food');
   xxx.eat()
 }); 
 
@@ -49,20 +53,20 @@ $('.P').on('click', (e) => {
 
 // xxx.eat();
 
+ // timer code goes here
+const intervalId = setInterval(() =>{
+  xxx.time++;
+  if(xxx.time % 5 === 0){
+    xxx.hungerLevel = xxx.hungerLevel + 1;
+  }
+  $('#timer').text('Time: ' + xxx.time + 's');
 
-// set interval
+  $('#hunger').text("Hunger:( " + xxx.hungerLevel + " )")
+}, 1000)
 
-  // increase hunger
 
-/// timer code goes here
-    //     const intervalId = setInterval(() =>{
-    //       this.time;
-    //       if(time % 5 === 0){
-    //       this.hungerLevel + 1;
-    //       }
-    //       if(this.boredom === 10)
 
-    //       $('#timer').text('Time: ', + this.time + 's');
-    //       $('#hunger').text("Hunger:( " + this.time + " )")
-    //     }, 1000)
-    //     $('#timer').append(this.time);
+
+
+
+
