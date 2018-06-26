@@ -1,10 +1,101 @@
 html {
-  background: tomato;
+  background: darkblue;
+}
+}
+.squares div {
+  width:  5vh;
+  height: 5vh;
+  margin-right: 1%;
+  display: inline-block;
+  background-color: blue;
+}
+main {
+  width: 100%;
+  display: block;
+  height: 100px;
+  background-color: pink;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+  padding-left: 1.5%;
+}
+h1 {
+  display: inline-block;
+}
+.Tomagotchi {
+  background: url(https://i.imgur.com/GKP8QZj.jpg);
+}
+
+/*-----from calculator----*/
+.btn {
+  height: 50px;
+  width: 50px;
+  margin: 8px;
+  border: 1px solid brown;
+  background: white;
+  color: black;
+}
+.row {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+}
+
+#display {
+  background-color: #f15B31;
+  color: white;
+  font size: 14px;
+  padding: 10%;
+  width: 50%;
+  display:inline-block;
+  text-align: center;
+  justify-content: center;
+
+}
+
+/*-----from profile page----*/
+body {
+  text-align: center;
+  background: url(https://i.imgur.com/GKP8QZj.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: helvetica;
+}
+p {
+  font-size: 22px;
+  color: white;
+}
+.photo {
+  margin-top: 60px;
+  border: solid white;
+  border-radius: 20px;
+  border-width: 3px;
 }
 
 
 
 
+/*---From card game----*/
+footer {
+  padding: -10px 10px;
+  background-color: #0D2C40;
+  font-size: 1px;
+  letter-spacing: .08em;
+  font-weight: 500;
+}
+.copyright {
+  font-family: "railway";
+  justify-content: flex-start;
+}
 
+.name {
+  color: #f15B31;
+  font-weight: 400;
+}
+
+.socialmedia {
+  justify-content: center;
+  color: #f15B31;
+}
 
 
