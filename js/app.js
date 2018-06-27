@@ -69,6 +69,7 @@ const intervalId = setInterval(() =>{
     xxx.hungerLevel = xxx.hungerLevel + 1;
   }
   //if levels get to 10 or more game over reload page
+  //(\n \n = line break
   if (xxx.sleepiness >= 10){
     window.alert( 'psydons beard! \nGAME OVER\n');
     location.reload();
