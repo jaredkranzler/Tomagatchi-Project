@@ -2,6 +2,7 @@ console.log('Tomagotchichichichi');
 
 // class---
 
+
 class Tom {
   constructor(name, age, hungerLevel, sleepiness, boredom, time){
     this.name = name;
@@ -67,16 +68,31 @@ const intervalId = setInterval(() =>{
   if(xxx.time % 5 === 0){
     xxx.hungerLevel = xxx.hungerLevel + 1;
   }
+  //if levels get to 10 or more game over reload page
+  if (xxx.sleepiness >= 10){
+    window.alert( 'psydons beard! \nGAME OVER\n');
+    location.reload();
+  }
+
   if (xxx.time % 7 === 0){
     xxx.boredom = xxx.boredom + 2;
   }
+  if(xxx.boredom >= 10){
+    window.alert( 'Mother of satan! \nGAME OVER\n');
+    location.reload();
+  }
+
   if (xxx.time % 9 === 0){
     xxx.sleepiness = xxx.sleepiness + 3;
+  }
+  if (xxx.sleepiness >= 10){
+    window.alert('I like scotch. Scotch, Scotch, Scotch \nGAME OVER\n');
+    location.reload();
   }
 
   $('#timer').text('Time: ' + xxx.time + 's');
   //this prints the hunger level 
-  $('#hunger').text("Hunger:( " + xxx.hungerLevel + " )")
+  $('#hunger').text("Thirst:( " + xxx.hungerLevel + " )")
 
   $('#bed').text("Sleepiness:( " + xxx.sleepiness + " )")
   //this prints the boredom level 
