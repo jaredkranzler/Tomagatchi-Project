@@ -68,7 +68,7 @@ class Tom {
       //this will change the background image or gif
       // $('body').css('background', 'url(https://medias.spotern.com/spots/w640/95803.jpg)')
       //this will change the html profile photo or gif
-      $('.photo').attr('src', 'http://images4.fanpop.com/image/photos/23800000/funny-gifs-harry-potter-23815244-500-222.gif')
+      $('.photo').attr('src', 'https://i.imgur.com/EsiI5Fi.gif')
     }
     // year 6 Order of the Phoenix (2007)
     if (this.age === 8){
@@ -82,14 +82,12 @@ class Tom {
       //this will change the background image or gif
       // $('body').css('background', 'url(http://i0.kym-cdn.com/photos/images/newsfeed/000/117/229/f79b7a8941dba2abf43346728aa287e4.gif)')
       //this will change the html profile photo or gif
-      $('.photo').attr('src', 'https://i.imgur.com/EsiI5Fi.gif')
+      $('.photo').attr('src', 'http://images4.fanpop.com/image/photos/23800000/funny-gifs-harry-potter-23815244-500-222.gif')
     }
 
   }
 
 };
-
-
 
 
 
@@ -163,11 +161,11 @@ const startTimer = ()=> {
   }, 1000)
   }
 
-  const randNum = Math.floor(Math.random() * 1000) + 1;
+const randNum = Math.floor(Math.random() * 1000) + 1;
 const refreshRate = 350/ 60;
 const maxXPosition = 800;
 let rect = document.getElementById('myAnimation');
-let speedX = 4;
+let speedX = 5;
 let positionX = randNum;
 window.setInterval(() => {
   positionX = positionX + speedX;

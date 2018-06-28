@@ -11,13 +11,11 @@
   /*background-color: red;*/
 }
 
-html {
-  background: white;
-}
 header{
   margin-top: -40px;
   padding: 40px;
-  background-color: rgb(3, 16, 38);
+  background-color: rgb(128, 0, 0);
+  border:;
 }
 #hp{
   height: 60px;
@@ -40,6 +38,7 @@ header{
 }
 p{
   text-shadow: 10px 10px 8px #888888;
+  font-family: fantasy;
 }
 }
 .squares div {
@@ -51,11 +50,12 @@ p{
 }
 main {
   font-size: 20px;
+  font-family: fantasy;
 }
 
 h1 {
   display: inline-block;
-font-family:  Helvetica, Arial, sans-serif;
+  font-family: fantasy;
 }
 }
 .Tomagotchi {
@@ -105,15 +105,17 @@ font-family:  Helvetica, Arial, sans-serif;
   display:inline-block;
   text-align: center;
   justify-content: center;
+  font-family: fantasy;
 }
 
 /*-----from profile page----*/
 body {
   text-align: center;
-  background: url(http://i.imgur.com/eVzOF6a.gif);
+  background: url(https://images3.alphacoders.com/261/26105.jpg);
   background-size: cover;
   background-position: center;
   color: white;
+  font-family: fantasy;
 
 }
 .photo {
@@ -126,6 +128,8 @@ body {
 
 h1, h2, h3 {
   text-shadow: 10px 10px 15px #888888;
+  font-family: fantasy;
+  margin: -5px;
 
 }
 
@@ -134,7 +138,7 @@ h1, h2, h3 {
 footer {
   margin-top: 60px;
   padding: 10px 10px;
-  background-color: rgb(3, 16, 38);
+  background-color: rgb(128, 0, 0);
   font-size: 15px;
   letter-spacing: .08em;
   /*font-weight: 500;*/
